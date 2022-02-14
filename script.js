@@ -12,11 +12,38 @@ from.addEventListener("blur", ()=>{
     if (isNaN(val)){
         varText.innerHTML = "Non è un numero..."
         val = 0
+    }else{
+        varText.innerHTML = "Ecco i risultati..."
     }
 
-    to2.value = "Base 2: " + Number(val).toString(2);
-    to8.value = "Base 8: " + Number(val).toString(8);
-    to16.value = "Base 16: " + Number(val).toString(16);
+    to2.innerHTML = "Base 2: " + Number(val).toString(2);
+    to8.innerHTML = "Base 8: " + Number(val).toString(8);
+    to16.innerHTML = "Base 16: " + Number(val).toString(16);
+})
+
+from.addEventListener("keyup", ()=>{
+    if(event.keyCode === 13){
+        var val = document.querySelector('.from').value;
+
+        if (isNaN(val)){
+            varText.innerHTML = "Non è un numero..."
+            val = 0
+        }else{
+            varText.innerHTML = "Ecco i risultati..."
+        }
+
+        to2.innerHTML = "Base 2: " + Number(val).toString(2);
+        to8.innerHTML = "Base 8: " + Number(val).toString(8);
+        to16.innerHTML = "Base 16: " + Number(val).toString(16);
+        
+        to2.classList.add("swing")
+        to8.classList.add("swing")
+        to16.classList.add("swing")
+
+        setTimeout(() => to2.classList.remove("swing"), 1500)
+        setTimeout(() => to8.classList.remove("swing"), 1500)
+        setTimeout(() => to16.classList.remove("swing"), 1500)
+    }
 })
 
 //Dec to...
@@ -58,7 +85,7 @@ window.addEventListener("click", ()=>{
 
 window.addEventListener("click",()=>{
     if (i == 1){
-        setTimeout(() => body.style.display = "flex", 3000)
+        setTimeout(() => body.style.display = "flex", 1500)
     }
 })
 

@@ -96,7 +96,7 @@
 }
 
 .animation{
-    animation: animation 3000ms ease-in-out forwards 200ms;
+    animation: animation 1500ms ease-in-out forwards 200ms;
 }
 @keyframes animation {
     0%{
@@ -125,18 +125,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
     width: 500000vw;
     height: 100vh;
 }
 .body .calc{
     font-family: 'ABeeZee';
     font-weight: 800;
+    font-size: 24pt;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 20vw;
-    height: 25vw;
+    height: 5vw;
 }
 .body .calc img{
     width: 20vw;
@@ -145,13 +148,36 @@
     padding: 5px;
     width: 15vw;
     height: 2vh;
-    border: none;
-    border-radius: 10px;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px #455a64 solid;
+    border-right: none;
     outline: none;
     background: none;
     font-family: 'ABeeZee';
     color: black;
     font-weight: 800;
+    text-align: center;
+}
+.swing{
+    animation: swing 1500ms ease-in-out forwards 200ms;
+}
+@keyframes swing {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(22.5deg);
+    }
+    40%{
+        transform: rotate(-22.5deg);
+    }
+    60%{
+        transform: rotate(11.25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 .body input::placeholder{
     padding: 5px;
@@ -160,13 +186,16 @@
     font-weight: 800;
 }
 .body .to{
+    height: 20vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-family: 'ABeeZee';
+    font-weight: 800;
 }
-.body .to input:nth-child(2){
+.body .to p:nth-child(2){
     margin: 2vh 0;
 }
-
 @media screen and (max-width:630px){
     .tbox h1{
         font-size: 32pt;
