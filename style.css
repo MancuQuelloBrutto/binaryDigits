@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.green{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Montserrat';
+    height: 100vh;
+    width: 100vw;
+    background-color: #4caf50;
+    position: relative;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+.yellow{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Montserrat';
+    height: 110vh;
+    width: 100vw;
+    background-color: #ffc107;
+    position: relative;
+    top: -50.6vw;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+.blue{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Montserrat';
+    height: 120vh;
+    width: 100vw;
+    background-color: #2196f3;
+    position: relative;
+    top: -110.5vw;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+.black{
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Montserrat';
+    height: 105vh;
+    width: 100vw;
+    background-color: #455a64;
+    position: relative;
+    top: -162.5vw;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+.tbox h1{
+    font-size: 128pt;
+    cursor: default;
+}
+.tbox h2{
+    font-size: 64pt;
+    cursor: default;
+}
+.tbox h3{
+    font-size: 32pt;
+    cursor: default;
+}
+.tbox h6{
+    font-weight: 500;
+}
+
+.animation{
+    animation: animation 3000ms ease-in-out forwards 200ms;
+}
+@keyframes animation {
+    0%{
+        left: 0vw;
+    }
+    25%{
+        left: 20vw;
+    }
+    95%{
+        left: -100vw;
+    }
+    100%{
+        visibility: hidden;
+        left: -100vw;
+    }
+}
+.body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #47835c;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));*/
+    /*background: linear-gradient(rgba(76, 175, 80, 0.50), rgba(255, 193, 7, 0.75), rgba(33, 150, 243, 0.75), rgba(69,90,100,0.5));*/
+}
+.body .linearGrad{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500000vw;
+    height: 100vh;
+}
+.body .calc{
+    font-family: 'ABeeZee';
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    height: 25vw;
+}
+.body .calc img{
+    width: 20vw;
+}
+.body input{
+    padding: 5px;
+    width: 15vw;
+    height: 2vh;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    font-family: 'ABeeZee';
+    color: black;
+    font-weight: 800;
+}
+.body input::placeholder{
+    padding: 5px;
+    font-family: 'ABeeZee';
+    color: black;
+    font-weight: 800;
+}
+.body .to{
+    display: flex;
+    flex-direction: column;
+}
+.body .to input:nth-child(2){
+    margin: 2vh 0;
+}
+
+@media screen and (max-width:630px){
+    .tbox h1{
+        font-size: 32pt;
+        cursor: default;
+    }
+    .tbox h2{
+        font-size: 20pt;
+        cursor: default;
+    }
+    .tbox h3{
+        font-size: 15pt;
+        cursor: default;
+    }
+    .tbox h6{
+        font-weight: 500;
+    }
+    .yellow{
+        top: -105vh;
+        align-items: center;
+    }
+    .yellow .tbox{
+        margin: 0 10vw;
+    }
+    .blue{
+        top: -220vh;
+    }
+    .black{
+        top: -332vh;
+    }
+    .body .linearGrad{
+        flex-direction: column;
+    }
+    .body input{
+        width: 75vw;
+        text-align: center;
+        padding: 0;
+    }
+    .body .calc{
+        width: 50vw;
+        height: 50vw;
+    }
+    .body .calc img{
+        width: 50vw;
+    }
+}
