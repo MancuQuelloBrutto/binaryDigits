@@ -131,24 +131,14 @@
     height: 100vh;
     color: white;
 }
+.body .linearGrad img{
+    margin: 10vh 0;
+}
 .body .linearGrad .to{
     font-size: 24pt;
 }
-.body .calc{
-    font-family: 'ABeeZee';
-    font-weight: 800;
-    font-size: 18pt;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 5vw;
-}
-.body .calc img{
-    width: 20vw;
-}
 .body input{
+    margin: 10vh 0;
     padding: 5px;
     width: 15vw;
     height: 5vh;

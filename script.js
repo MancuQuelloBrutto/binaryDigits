@@ -4,17 +4,9 @@ const from = document.querySelector(".from")
 const to2 = document.querySelector(".to2")
 const to8 = document.querySelector(".to8")
 const to16 = document.querySelector(".to16")
-const varText = document.querySelector(".varText")
 
 from.addEventListener("blur", ()=>{
     var val = document.querySelector('.from').value;
-
-    if (isNaN(val)){
-        varText.innerHTML = "Non è un numero..."
-        val = 0
-    }else{
-        varText.innerHTML = "Ecco i risultati..."
-    }
 
     to2.innerHTML = "Base 2: " + Number(val).toString(2);
     to8.innerHTML = "Base 8: " + Number(val).toString(8);
@@ -24,13 +16,6 @@ from.addEventListener("blur", ()=>{
 from.addEventListener("keyup", ()=>{
     if(event.keyCode === 13){
         var val = document.querySelector('.from').value;
-
-        if (isNaN(val)){
-            varText.innerHTML = "Non è un numero..."
-            val = 0
-        }else{
-            varText.innerHTML = "Ecco i risultati..."
-        }
 
         to2.innerHTML = "Base 2: " + Number(val).toString(2);
         to8.innerHTML = "Base 8: " + Number(val).toString(8);
