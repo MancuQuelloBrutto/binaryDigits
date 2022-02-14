@@ -129,11 +129,15 @@
     text-align: center;
     width: 500000vw;
     height: 100vh;
+    color: white;
+}
+.body .linearGrad .to{
+    font-size: 24pt;
 }
 .body .calc{
     font-family: 'ABeeZee';
     font-weight: 800;
-    font-size: 24pt;
+    font-size: 18pt;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +151,7 @@
 .body input{
     padding: 5px;
     width: 15vw;
-    height: 2vh;
+    height: 5vh;
     border-top: none;
     border-left: none;
     border-bottom: 2px #455a64 solid;
@@ -155,7 +159,7 @@
     outline: none;
     background: none;
     font-family: 'ABeeZee';
-    color: black;
+    color: white;
     font-weight: 800;
     text-align: center;
 }
@@ -182,11 +186,11 @@
 .body input::placeholder{
     padding: 5px;
     font-family: 'ABeeZee';
-    color: black;
+    color: white;
     font-weight: 800;
 }
 .body .to{
-    height: 20vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
