@@ -19,6 +19,13 @@
     <link rel="shortcut icon" href="./Img/calculator.png" type="image/x-icon">
 </head>
 <body>
+    <?php 
+        $ip = $_SERVER['REMOTE_ADDR']; ;
+        $now = date('c');
+        $new_line = "{$now} {$ip}\r\n";
+        file_put_contents('C:\xampp\htdocs\testCoonvertor\log.txt', $new_line, LOCK_EX | FILE_APPEND);
+        ?>
+    ?>
     <div class="body">
         <div class="green">
             <div class="tbox">
@@ -57,6 +64,7 @@
             </div>
         </div>
     </div>
+    <script src="./backEnd.php"></script>
     <script src="./script.js"></script>
 </body>
 </html>

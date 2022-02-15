@@ -42,63 +42,61 @@ const blue = document.querySelector('.blue')
 const black = document.querySelector('.black')
 var i = 5
 
-    //KeyUp
+window.addEventListener("keyup", ()=>{    
+    i--
+    if ( i == 4){
+        green.classList.add("animation")
+    }
+    console.log(i);
+})
 
-        window.addEventListener("keyup", ()=>{    
-            i--
-            if ( i == 4){
-                green.classList.add("animation")
-            }
-            console.log(i);
-        })
+window.addEventListener("keyup", ()=>{
+    if (i == 3){
+        yellow.classList.add("animation")
+    }
+})
 
-        window.addEventListener("keyup", ()=>{
-            if (i == 3){
-                yellow.classList.add("animation")
-            }
-        })
+window.addEventListener("keyup", ()=>{
+    if (i == 2){
+        blue.classList.add("animation")
+    }
+})
 
-        window.addEventListener("keyup", ()=>{
-            if (i == 2){
-                blue.classList.add("animation")
-            }
-        })
+window.addEventListener("keyup", ()=>{
+    if (i == 1){
+        black.classList.add("animation")
+        setTimeout(() => body.style.display = "flex", 1500)
+    }
+})
 
-        window.addEventListener("keyup", ()=>{
-            if (i == 1){
-                black.classList.add("animation")
-                setTimeout(() => body.style.display = "flex", 1500)
-            }
-        })
 
-    //Click
 
-        window.addEventListener("click", ()=>{    
-            i--
-            if ( i == 4){
-                green.classList.add("animation")
-            }
-            console.log(i);
-        })
+window.addEventListener("click", ()=>{    
+    i--
+    if ( i == 4){
+        green.classList.add("animation")
+    }
+    console.log(i);
+})
 
-        window.addEventListener("click", ()=>{
-            if (i == 3){
-                yellow.classList.add("animation")
-            }
-        })
+window.addEventListener("click", ()=>{
+    if (i == 3){
+        yellow.classList.add("animation")
+    }
+})
 
-        window.addEventListener("click", ()=>{
-            if (i == 2){
-                blue.classList.add("animation")
-            }
-        })
+window.addEventListener("click", ()=>{
+    if (i == 2){
+        blue.classList.add("animation")
+    }
+})
 
-        window.addEventListener("click", ()=>{
-            if (i == 1){
-                black.classList.add("animation")
-                setTimeout(() => body.style.display = "flex", 1500)
-            }
-        })
+window.addEventListener("click", ()=>{
+    if (i == 1){
+        black.classList.add("animation")
+        setTimeout(() => body.style.display = "flex", 1500)
+    }
+})
 
 //Scroll
 
@@ -127,23 +125,28 @@ if (window.innerWidth < 630){
 //Random BG
 
 // const body = document.querySelector(".body")
+// const from = document.querySelector(".from")
 
 var num = Math.floor(Math.random() * 4)
 
 if(num == 0){
     body.style.backgroundColor = "#4caf50"
+    body.style.transition = "0.8s"
 }
 
 if(num == 1){
     body.style.backgroundColor = "#ffc107"
+    body.style.transition = "0.8s"
 }
 
 if(num == 2){
     body.style.backgroundColor = "#2196f3"
+    body.style.transition = "0.8s"
 }
 
 if(num == 3){
     body.style.backgroundColor = "#455a64"
+    body.style.transition = "0.8s"
 }
 
 //Random BG
