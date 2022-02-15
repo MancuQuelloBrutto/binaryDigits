@@ -42,37 +42,63 @@ const blue = document.querySelector('.blue')
 const black = document.querySelector('.black')
 var i = 5
 
-window.addEventListener("click", ()=>{    
-    i--
-    if ( i == 4){
-        green.classList.add("animation")
-    }
-    console.log(i);
-})
+    //KeyUp
 
-window.addEventListener("click", ()=>{
-    if (i == 3){
-        yellow.classList.add("animation")
-    }
-})
+        window.addEventListener("keyup", ()=>{    
+            i--
+            if ( i == 4){
+                green.classList.add("animation")
+            }
+            console.log(i);
+        })
 
-window.addEventListener("click", ()=>{
-    if (i == 2){
-        blue.classList.add("animation")
-    }
-})
+        window.addEventListener("keyup", ()=>{
+            if (i == 3){
+                yellow.classList.add("animation")
+            }
+        })
 
-window.addEventListener("click", ()=>{
-    if (i == 1){
-        black.classList.add("animation")
-    }
-})
+        window.addEventListener("keyup", ()=>{
+            if (i == 2){
+                blue.classList.add("animation")
+            }
+        })
 
-window.addEventListener("click",()=>{
-    if (i == 1){
-        setTimeout(() => body.style.display = "flex", 1500)
-    }
-})
+        window.addEventListener("keyup", ()=>{
+            if (i == 1){
+                black.classList.add("animation")
+                setTimeout(() => body.style.display = "flex", 1500)
+            }
+        })
+
+    //Click
+
+        window.addEventListener("click", ()=>{    
+            i--
+            if ( i == 4){
+                green.classList.add("animation")
+            }
+            console.log(i);
+        })
+
+        window.addEventListener("click", ()=>{
+            if (i == 3){
+                yellow.classList.add("animation")
+            }
+        })
+
+        window.addEventListener("click", ()=>{
+            if (i == 2){
+                blue.classList.add("animation")
+            }
+        })
+
+        window.addEventListener("click", ()=>{
+            if (i == 1){
+                black.classList.add("animation")
+                setTimeout(() => body.style.display = "flex", 1500)
+            }
+        })
 
 //Scroll
 
@@ -97,3 +123,27 @@ if (window.innerWidth < 630){
 }
 
 //Screen modifier
+
+//Random BG
+
+// const body = document.querySelector(".body")
+
+var num = Math.floor(Math.random() * 4)
+
+if(num == 0){
+    body.style.backgroundColor = "#4caf50"
+}
+
+if(num == 1){
+    body.style.backgroundColor = "#ffc107"
+}
+
+if(num == 2){
+    body.style.backgroundColor = "#2196f3"
+}
+
+if(num == 3){
+    body.style.backgroundColor = "#455a64"
+}
+
+//Random BG

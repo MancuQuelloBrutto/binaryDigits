@@ -118,8 +118,6 @@
     align-items: center;
     height: 100vh;
     background-color: #47835c;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));*/
-    /*background: linear-gradient(rgba(76, 175, 80, 0.50), rgba(255, 193, 7, 0.75), rgba(33, 150, 243, 0.75), rgba(69,90,100,0.5));*/
 }
 .body .linearGrad{
     display: flex;
@@ -132,7 +130,7 @@
     color: white;
 }
 .body .linearGrad img{
-    margin: 10vh 0;
+    width: 10vw;
 }
 .body .linearGrad .to{
     font-size: 24pt;
@@ -142,10 +140,7 @@
     padding: 5px;
     width: 15vw;
     height: 5vh;
-    border-top: none;
-    border-left: none;
-    border-bottom: 2px #455a64 solid;
-    border-right: none;
+    border: none;
     outline: none;
     background: none;
     font-family: 'ABeeZee';
@@ -221,6 +216,9 @@
     }
     .body .linearGrad{
         flex-direction: column;
+    }
+    .body .linearGrad img{
+        width: 25vw;
     }
     .body input{
         width: 75vw;
