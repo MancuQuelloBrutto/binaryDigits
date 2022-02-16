@@ -176,7 +176,7 @@ var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return
 
 //IOS
 
-if(isSafari == true){
+if(isSafari == "true"){
     // First we check if you support touch, otherwise it's click:
     let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
@@ -188,19 +188,19 @@ if(isSafari == true){
         }
         console.log(i);
     });
-    
+
     window.addEventListener(touchEvent, ()=>{
         if (i == 3){
             yellow.classList.add("animation")
         }
     });
-    
+
     window.addEventListener(touchEvent, ()=>{
         if (i == 2){
             blue.classList.add("animation")
         }
     });
-    
+
     window.addEventListener(touchEvent, ()=>{
         if (i == 1){
             black.classList.add("animation")
