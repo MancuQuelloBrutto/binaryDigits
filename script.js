@@ -100,6 +100,23 @@ window.addEventListener("click", ()=>{
 
 //Scroll
 
+//Skip introduction
+
+// const yellow = document.querySelector('.yellow')
+// const blue = document.querySelector('.blue')
+// const black = document.querySelector('.black')
+const skip = document.querySelector(".skipbox")
+
+skip.addEventListener("click", ()=>{
+    green.classList.add("animation")
+    setTimeout(() => yellow.classList.add("animation"), 1500)
+    setTimeout(() => blue.classList.add("animation"), 3000)
+    setTimeout(() => black.classList.add("animation"), 4500)
+    setTimeout(() => body.style.display = "flex", 6000)
+})
+
+//Skip introduction
+
 //Screen modifier
 
 const click = document.querySelector(".click")
@@ -150,3 +167,39 @@ if(num == 3){
 }
 
 //Random BG
+
+//IOS
+
+// First we check if you support touch, otherwise it's click:
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
+// Then we bind via thát event. This way we only bind one event, instead of the two as below
+window.addEventListener(touchEvent, ()=>{
+    i--
+    if ( i == 4){
+        green.classList.add("animation")
+    }
+    console.log(i);
+});
+
+window.addEventListener("click", ()=>{
+    if (i == 3){
+        yellow.classList.add("animation")
+    }
+});
+
+window.addEventListener("click", ()=>{
+    if (i == 2){
+        blue.classList.add("animation")
+    }
+});
+
+window.addEventListener("click", ()=>{
+    if (i == 1){
+        black.classList.add("animation")
+        setTimeout(() => body.style.display = "flex", 1500)
+    }
+});
+
+
+//IOS
