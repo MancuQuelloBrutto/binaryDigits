@@ -186,13 +186,11 @@ if(userAgent.match(/chrome|chromium|crios/i)){
   }else{
     browserName="No browser detection";
   }
-
-document.querySelector("h1").innerText="You are using "+ browserName +" browser";
 //Check if Safari
 
 //IOS
 
-if(isSafari == "true"){
+if(browserName == "safari"){
     // First we check if you support touch, otherwise it's click:
     let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
