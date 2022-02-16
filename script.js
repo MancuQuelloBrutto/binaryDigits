@@ -170,8 +170,14 @@ if(num == 3){
 
 //Check if Safari
 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+let userAgent = navigator.userAgent;
+let browserName;
 
+if(userAgent.match(/safari/i)){
+    browserName = "safari";
+}   
+
+document.querySelector("h1").innerText="You are using "+ browserName +" browser";
 //Check if Safari
 
 //IOS
