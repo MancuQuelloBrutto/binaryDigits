@@ -182,19 +182,19 @@ window.addEventListener(touchEvent, ()=>{
     console.log(i);
 });
 
-window.addEventListener("click", ()=>{
+window.addEventListener(touchEvent, ()=>{
     if (i == 3){
         yellow.classList.add("animation")
     }
 });
 
-window.addEventListener("click", ()=>{
+window.addEventListener(touchEvent, ()=>{
     if (i == 2){
         blue.classList.add("animation")
     }
 });
 
-window.addEventListener("click", ()=>{
+window.addEventListener(touchEvent, ()=>{
     if (i == 1){
         black.classList.add("animation")
         setTimeout(() => body.style.display = "flex", 1500)
