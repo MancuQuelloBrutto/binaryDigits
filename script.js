@@ -168,9 +168,16 @@ if(num == 3){
 
 //Random BG
 
+//Check if Safari
+
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+//Check if Safari
+
 //IOS
 
-// First we check if you support touch, otherwise it's click:
+if(isSafari == true){
+    // First we check if you support touch, otherwise it's click:
 let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 // Then we bind via thát event. This way we only bind one event, instead of the two as below
@@ -201,5 +208,6 @@ window.addEventListener(touchEvent, ()=>{
     }
 });
 
+}
 
 //IOS
