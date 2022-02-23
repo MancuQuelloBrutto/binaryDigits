@@ -15,7 +15,7 @@
     height: 100vh;
     width: 100vw;
     background-color: #4caf50;
-    position: relative;
+    position: absolute;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -30,11 +30,10 @@
     flex-direction: column;
     text-align: left;
     font-family: 'Montserrat';
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
     background-color: #ffc107;
-    position: relative;
-    top: -50.6vw;
+    position: absolute;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -49,11 +48,10 @@
     flex-direction: column;
     text-align: left;
     font-family: 'Montserrat';
-    height: 120vh;
+    height: 100vh;
     width: 100vw;
     background-color: #2196f3;
-    position: relative;
-    top: -110.5vw;
+    position: absolute;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -68,11 +66,10 @@
     flex-direction: column;
     text-align: left;
     font-family: 'Montserrat';
-    height: 114vh;
+    height: 100vh;
     width: 100vw;
     background-color: #455a64;
-    position: relative;
-    top: -167.5vw;
+    position: absolute;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -119,20 +116,72 @@
     height: 100vh;
     background-color: #47835c;
 }
-.body .linearGrad{
+.body .calc{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     width: 500000vw;
     height: 100vh;
     color: white;
 }
-.body .linearGrad img{
+.body .calc .left{
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+}
+.mopen{
+    animation: mopen 1500ms ease-in-out forwards 200ms;
+}
+@keyframes mopen {
+    0%{
+        left: 0;
+    }
+    75%{
+        left: 220px;
+    }
+    100%{
+        left: 200px;
+    }
+}
+.mclose{
+    animation: mclose 1500ms ease-in-out forwards 200ms;
+    left: 200px;
+}
+@keyframes mclose {
+    0%{
+        left: 200px;
+    }
+    75%{
+        left: 220px;
+    }
+    100%{
+        left: 0;
+    }
+}
+.body .calc .hamburger{
+    margin: 5px;
+    cursor: pointer;
+}
+.body .calc .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+.body .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body .main img{
     width: 10vw;
 }
-.body .linearGrad .to{
+.body .main .to{
     font-size: 24pt;
 }
 .body input{

@@ -109,10 +109,10 @@ const skip = document.querySelector(".skipbox")
 
 skip.addEventListener("click", ()=>{
     green.classList.add("animation")
-    setTimeout(() => yellow.classList.add("animation"), 1500)
-    setTimeout(() => blue.classList.add("animation"), 3000)
-    setTimeout(() => black.classList.add("animation"), 4500)
-    setTimeout(() => body.style.display = "flex", 6000)
+    setTimeout(() => yellow.classList.add("animation"), 500)
+    setTimeout(() => blue.classList.add("animation"), 1000)
+    setTimeout(() => black.classList.add("animation"), 1500)
+    setTimeout(() => body.style.display = "flex", 3000)
 })
 
 //Skip introduction
@@ -168,6 +168,19 @@ if(num == 3){
 
 //Random BG
 
+//Menu Open
+
+const menu = document.querySelector(".hamburger")
+const left = document.querySelector(".left")
+
+menu.addEventListener("click", ()=>{
+    
+    left.classList.add("mopen")
+    
+})
+
+//Menu Open
+
 //Check if Safari
 
 let userAgent = navigator.userAgent;
@@ -177,11 +190,11 @@ if(userAgent.match(/chrome|chromium|crios/i)){
     browserName = "chrome";
   }else if(userAgent.match(/firefox|fxios/i)){
     browserName = "firefox";
-  }  else if(userAgent.match(/safari/i)){
+  }else if(userAgent.match(/safari/i)){
     browserName = "safari";
   }else if(userAgent.match(/opr\//i)){
     browserName = "opera";
-  } else if(userAgent.match(/edg/i)){
+  }else if(userAgent.match(/edg/i)){
     browserName = "edge";
   }else{
     browserName="No browser detection";
